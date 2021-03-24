@@ -1,0 +1,17 @@
+main {
+    margin-top: 5%;
+    padding: 1% 2%;
+    overflow-x:auto;
+}
+ 
+.titulo {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+.underline {
+    margin-bottom: 2%;
+}

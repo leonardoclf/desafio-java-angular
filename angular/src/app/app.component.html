@@ -1,0 +1,20 @@
+<mat-drawer-container class="app-container" hasBackdrop="true">
+  <mat-drawer #drawer mode="over" class="app-drawer">
+    <div id="sidebar-menu">
+        <button mat-raised-button routerLink="/">Controle Interno</button>
+        <button mat-raised-button routerLink="/pedido"><mat-icon>post_add</mat-icon>Novo Pedido</button>
+        <button mat-raised-button routerLink="/status-mesa">Status das Mesas</button>
+        <button mat-raised-button routerLink="/status-pedido">Histórico dos Pedidos</button>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <button
+      mat-raised-button
+      (click)="drawer.toggle()"
+      style="left: 2%; top: 2%"
+    >
+      <mat-icon>menu</mat-icon>Menu
+    </button>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

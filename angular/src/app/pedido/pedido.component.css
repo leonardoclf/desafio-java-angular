@@ -1,0 +1,33 @@
+mat-card {
+  padding: 4% 4%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.underline {
+  margin-bottom: 3%;
+}
+
+.button-container {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px;
+}
+
+.custom-input {
+  text-align: right; 
+  color: black; 
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 4% 30%;
+  }
+}

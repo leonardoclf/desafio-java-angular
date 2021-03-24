@@ -1,0 +1,38 @@
+<main>
+    <h1 class="titulo">Histórico dos Pedidos</h1>
+    <div class="underline"></div>
+    <div class="tabela">
+        <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <!-- User name Definition -->
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Nº Pedido</mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="item">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Item </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.item}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="quantidade">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Quantidade </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.quantidade}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="valor">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Valor </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.valor}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="mesa">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Mesa </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.mesa}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="status" mat-sort-header>
+                <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+            </ng-container>
+    
+            <!-- Header and Row Declarations -->
+            <mat-header-row *matHeaderRowDef="column"></mat-header-row>
+            <mat-row *matRowDef="let myRowData; columns: column"></mat-row>
+        </mat-table>
+    </div>
+</main>
+

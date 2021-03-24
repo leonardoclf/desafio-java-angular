@@ -1,0 +1,38 @@
+a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e7e6e1;
+}
+
+.app-drawer  {    
+    line-height: 1.75rem;
+    flex-flow: column nowrap;
+    font-size: 1.5rem;
+}
+
+
+#sidebar-menu {
+    display: flex; 
+    
+    flex-flow: column nowrap;
+}
+
+#sidebar-menu > button {
+    margin: 15% 3%;
+}
+
+
+
+
+

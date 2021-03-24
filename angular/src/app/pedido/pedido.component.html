@@ -1,0 +1,39 @@
+<main>
+  <h1 style="text-align: center;">Novo Pedido</h1>
+  <div class="underline"></div>
+  <mat-card>
+  <mat-form-field appearance="fill">
+    <mat-label>Item</mat-label>
+    <mat-select [(ngModel)]="selectedPedidoById">
+      <mat-option *ngFor="let item of itens" [value]="item.id" (click)="getValorUni(item)">{{item.nome | uppercase}}   R${{item.valor}}
+        </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+
+  <mat-form-field appearance="fill">
+    <mat-label>Quantidade</mat-label>
+    <input matInput placeholder="Quantidade" [(ngModel)]="selectedQuantidade" disabled class="custom-input">
+    <div class="button-container">
+      <button mat-icon-button color="warn" (click)="remove()"><mat-icon >remove</mat-icon></button>
+      <button mat-icon-button color="primary" (click)="add()"><mat-icon >add</mat-icon></button>
+    </div>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label >Valor Total</mat-label>
+    <input matInput [(ngModel)]="selectedValor" value="{{selectedValor}}" disabled class="custom-input">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mesa</mat-label>
+    <mat-select [(ngModel)]="selectedMesa">
+      <mat-option *ngFor="let mesa of mesas" [value]="mesa">{{mesa}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <button mat-raised-button color="primary" (click)="addPedido()" *ngIf="!isVazio()">Adicionar Novo Pedido</button>
+    </mat-card>
+  
+</main>

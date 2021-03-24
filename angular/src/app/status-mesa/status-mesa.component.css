@@ -1,0 +1,97 @@
+head {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 1%;
+}
+
+head>h1 {
+    font-size: 2rem;
+    margin-bottom: 1.75px;
+}
+
+p {   
+    display: flex;  
+    justify-content: space-between;
+}
+
+mat-card > mat-card-title {
+    text-align: center;
+}
+
+.mesas-container {
+    margin-top: 10px;
+    padding: 0 20%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    
+}
+
+.mesas-container > mat-card {
+    text-align: center;
+    cursor: pointer;
+    background-color: #314e52;
+    color: #fff;
+}
+
+.mesas-container > mat-card:hover {
+    background-color: #8c8c8c;
+    
+}
+
+.mesa-escolhida {
+    margin-top: 1%;
+    display: grid; 
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.edicao {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.btn {
+    margin-bottom: 5%;
+
+}
+
+.conta-total {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.button-container {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px;
+}
+
+.btn-concluir {
+    background-color: #33C057 ;
+}
+
+.btn-cancelar {
+    color:black;
+}
+
+.escolher-mesa {
+    background: #314e52;
+    color: #fff;
+}
+
+.custom-input {
+  text-align: right; 
+  color: black; 
+  font-weight: bolder;
+}
+
+.titulo {
+    margin-top: 4%;
+}
